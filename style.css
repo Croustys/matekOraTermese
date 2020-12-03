@@ -1,0 +1,86 @@
+#root {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.nav-bar {
+  display: flex;
+  align-items: flex-end;
+}
+.carousel-box {
+  margin-top: 3vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.carousel {
+  width: 60%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.text-box {
+  background-color: #fcfcfc;
+  padding: 1.5em;
+  border-radius: 0.3em;
+  height: auto;
+  /* max-height: 20em; */
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 3px 8px;
+}
+.card-title {
+  margin-bottom: 2vh;
+  font-size: 3em;
+}
+.card-text {
+  max-width: 20vw;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+#root {
+  height: 100vh;
+  justify-content: space-around;
+  align-items: center;
+  animation: expand .5s ease forwards;
+  background-color: white;
+  position: relative;
+  transition: all 0.8s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: -10;
+  background-color: rgb(153, 153, 153);
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(500px) scale(0.2);
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(300px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: translateY(1400px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
